@@ -1,0 +1,23 @@
+server:
+  port: 8182
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgresqldb:5432/bookstore_db
+    username: postgres
+    password: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+    open-in-view: false
+
+
+accessTokenLifeTime: 86400000
+refreshTokenLifeTime: 172800000
+
+tokenSecretKey: MbQeThVmYq3t6w9z$C&F)J@NcRfUjXnZ

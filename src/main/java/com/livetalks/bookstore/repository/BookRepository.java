@@ -1,0 +1,10 @@
+package com.livetalks.bookstore.repository;
+
+import com.livetalks.bookstore.entity.book.Book;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.UUID;
+
+public interface BookRepository extends JpaRepository<Book, UUID> {
+    boolean existsByTitle(String title);
+}
